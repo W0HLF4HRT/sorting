@@ -19,13 +19,19 @@ def insertionSort(case):
 
 
 def selectionSort(case):
+#Ligesom insertionSort, så skal vi definere funktionen som kører igennem hvert et case.
+#Et case er defineret i performanceTests.py.
     for i in range (0, len(case) - 1):
+    #Her siger vi at algoritmen skal læse vores case igennem fra 0 til længden af casen -1, hvilket er fra start til slut.
         minIndex = i
+    #minIndex bliver så defineret som det første index i listen. Dette skal vi bruge til sammenligninger.
         for j in range (i+1, len(case)):
             if case[j] < case[minIndex]:
                 minIndex = j
+        #Her definerer vi vores forloop, som læser igennem de ulæste dele af casen, og sammenligner for at finde den mindste værdi.
         if minIndex !=i:
             case[i], case[minIndex] = case[minIndex], case[i]
+    #Hvis minIndex ikke har samme værdi som i, så skal de to værdier vi har fat i bytte plads.
 
 
 
